@@ -1,50 +1,19 @@
-# bdsa-product-catalog
+Organization and founder manager integrated with Crunchbase API
+Components
+The web application has a search box in which you can type Organizations/Founders and the results will be displayed below using the Crunchbase API in a list format from which you can choose which one of those you are looking for and save them using a MySQL database. In the menu you can pick whether you want to search or see the saved list.
 
-# git clone
+API calls
+GET /ORGANIZATIONS/
 
-```bash
-git clone https://github.com/eduardbudacu/bdsa-product-catalog.git
-```
+GET /ORGANIZATIONS/:NAME/FOUNDERS
 
-```bash
-cd bdsa-product-catalog
-```
+POST /ORGANIZATIONS
 
-```bash
-npm install
-```
+PUT /ORGANIZATIONS/:NAME
 
-# install mysql
+GET /PERSONS/:PERMALINK/FOUNDED_COMPANIES
 
-```bash
-mysql-ctl start
-```
+User Actions
+Search by organization name/ founder name View the founders of the company or the companies that some person may have founded Add them to the list of companies in which you are interested See the list where you can see all the companies and their founders
 
-```bash
-mysql -u root
-```
-
-```sql
-source ~/workspace/bdsa-product-catalog/sql/catalog.sql
-```
-
-```sql
-INSERT INTO categories (name, description) VALUES ('Carti','Cele mai tari carti');
-```
-
-```sql
-INSERT INTO products (name, description, category_id, price) VALUES ('Clean Code', 'Make code great again!', 1, 100);
-```
-
-```sql
-exit
-```
-
-# run server.js
-
-```bash
-node server.js
-```
-
-(or in Cloud9 open file and press Run)
-
+*Node modules are not included in the repository.
